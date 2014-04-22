@@ -25,7 +25,7 @@ namespace :erd do
       if Rake.application.options.trace
         raise
       else
-        error = (["Loading models failed!\nError occurred while loading application: #{err} (#{err.class})"] + trace).join("\n    ")
+        error = (["Loading models failed!\nError occurred while loading application: #{err} (#{err.class})"]).join("\n    ")
         raise error
       end
     end
