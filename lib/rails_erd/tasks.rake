@@ -20,7 +20,7 @@ namespace :erd do
 
     say "Loading code in search of Active Record models..."
     begin
-      ActiveRecord.eager_load!
+      Dir["/app/models"].each {|f| require f}
     rescue Exception => err
       if Rake.application.options.trace
         raise
